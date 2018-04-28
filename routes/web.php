@@ -17,7 +17,6 @@ Route::get('/', 'ControladorUsuario@index');
 Route::get('registro', 'ControladorUsuario@registro');
 Route::get('iniciar-sesion', 'ControladorUsuario@iniciar_sesion');
 Route::resource('usuario', 'ControladorUsuario');
-Route::resource('login', 'LoginController');
 
 //SOLO CON LOGIN
 Route::get('codigos-promocionales', 'ControladorUsuario@codigos_promocionales');
