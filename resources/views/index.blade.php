@@ -7,18 +7,18 @@
     <div class="row">
         <div class="col-sm-12 p-4">
 		
-		<p>Inicia sesion o registrate para obtener descuentos increibles en tus compras. A que esperas? Registrate gratis.</p>
-			
-		<div class="text-center">
-		<div id="codigoGenerado"></div>
-		<a href="iniciar-sesion">
-			<button class="btn btn-primary btn-lg">Iniciar sesion</button>
-		</a>
-		<a href="registro">
-			<button class="btn btn-primary btn-lg">Registro</button>
-		</a>
-		</div>
-		
+			<p>Inicia sesion o registrate para obtener descuentos increibles en tus compras. A que esperas? Registrate gratis.</p>
+				
+			<div class="text-center">
+
+				<a href="{!!URL::to('iniciar-sesion')!!}">
+					<button class="btn btn-primary btn-lg">Iniciar sesion</button>
+				</a>
+				<a href="{!!URL::to('registro')!!}">
+					<button class="btn btn-primary btn-lg">Registro</button>
+				</a>
+
+			</div>
 		</div>
     </div>
-   @stop
+@stop

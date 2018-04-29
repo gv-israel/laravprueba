@@ -1,8 +1,6 @@
  @extends('plantilla.principal')
  @section('title', 'Iniciar Sesion')
 
- <?php $mensaje=Session::get('mensaje') ?>
-
 @if(Session::has('registro-exitoso'))
 <div class="alert alert-success" role="alert">{{Session::get('registro-existoso')}}</div>
 @endif
@@ -30,16 +28,15 @@
         <div class="col-sm-offset-4 col-sm-5 m-auto">
         <h1>Iniciar Sesion</h1><br>
 
-
-         {!!Form::open(['route'=>'login.store', 'method'=>'post'])!!}
-            {!!Form::text('email', null, ['class'=>'form-control form-control-lg', 'placeholder'=>'Email'])!!}
-            {!!Form::password('clave', ['class'=>'form-control form-control-lg', 'placeholder'=>'Contraseña'])!!}
-            {!!Form::submit('Iniciar sesion', ['class'=>'btn btn-primary'])!!}
-         {!!Form::close()!!}
+             {!!Form::open(['route'=>'login.store', 'method'=>'post'])!!}
+                {!!Form::text('email', null, ['class'=>'form-control form-control-lg', 'placeholder'=>'Email'])!!}
+                {!!Form::password('clave', ['class'=>'form-control form-control-lg', 'placeholder'=>'Contraseña'])!!}
+                {!!Form::submit('Iniciar sesion', ['class'=>'btn btn-primary'])!!}
+             {!!Form::close()!!}
 
             <p class="float-right">
                 Aun no estas registrado? <br>
-            <a href="registro">Registrate Gratis</a>
+                <a href="{!!URL::to('registro')!!}">Registrate Gratis</a>
             </p>
        
             
